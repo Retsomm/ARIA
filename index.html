@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>&lt;Project 5&gt; 實際應用範例 bootstrap - 結合skrollr製作捲動式網頁</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/awesome-bootstrap-checkbox/1.0.2/awesome-bootstrap-checkbox.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+  <div class="container">
+    <div class="navbar-header"><a class="navbar-brand">ARIA</a></div>
+    <div class="navbar-collapse collapse">
+      <div class="nav navbar-nav navbar-right">
+        <li><a href="#section_ask">引言 INTRO</a></li>
+        <li><a href="#section_about">介紹 ABOUT</a></li>
+        <li><a href="#section_story">故事 STORY</a></li>
+        <li><a href="#section_future">未來 FUTURE</a></li>
+      </div>
+    </div>
+  </div>
+</nav>
+<header class="jumbotron">
+  <div class="container">
+    <h1 class="title" data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">水星領航員，火星上的新威尼斯</h1>
+    <hr/>
+    <h4>未來式的治癒系故事。</h4>
+  </div>
+</header>
+<section id="section_ask">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 img" data-0="transform: translateX(-200px)" data-500="transform: translateX(-30px)"></div>
+      <div class="col-sm-3" data-300="opacity: 0" data-500="opacity: 1"></div>
+      <h2>你想體驗火星上的生活嗎?</h2>
+    </div>
+  </div>
+</section>
+<section id="section_about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <h1>關於火星上的新威尼斯</h1>
+        <hr/>
+      </div>
+      <div class="col-md-4 col-sm-6" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <div class="img_wrap" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img src="https://img.alicdn.com/i2/126231045/O1CN01SIX7ip1Jaecb5VBtr_!!126231045.jpg" alt=""/></div>
+        <h3 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">新威尼斯</h3>
+        <p data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">故事設定在24世紀。彼時人類在火星上進行地球化改造工程，由於兩極冰帽融解的水量超乎預期，全星球有90%被海洋覆蓋，因而被稱為「水星」。<br></br>在此星球上有個以過去被稱為「水都」的威尼斯為範本所建造的城市<b>新威尼斯</b>，因其仿古的建築與承襲傳統的生活方式而廣受觀光客喜愛。</p>
+      </div>
+      <div class="col-md-4 col-sm-6" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <div class="img_wrap" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img src="https://pbs.twimg.com/profile_images/493685603666370560/CBqHaeJI_400x400.jpeg" alt=""/></div>
+        <h3 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">水無燈里</h3>
+        <p data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">出身於地球的<b>水無燈里</b>，以成為能獨當一面的領航員為目標而來到新威尼斯，在「亞利亞公司」見習。<br></br>身為半熟手的她，每天都持續練習操控貢多拉及觀光導覽。《水星領航員》便是在描寫燈里以及她身旁的朋友在一年四季中的日常生活點滴。</p>
+      </div>
+      <div class="col-md-4 col-sm-6" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <div class="img_wrap" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><img src="https://i.imgur.com/yVZSIK8.png" alt=""/></div>
+        <h3 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">領航員</h3>
+        <p data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">指的是專為觀光導覽的貢多拉操控者。能從事的只有女性，是水星的明星職業。<br></br><b>領航員</b>手上是否有戴手套為能力的指標：見習生的手為雙手套，半熟手為單手套，能獨當一面的老手則無手套。這是因為有本事的領航員不必使用過多的力量即可操控貢多拉、手也不大會起水泡，所以也就沒有戴手套保護的必要了。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_story">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-5 map" data-bottom-top="background-size: 200%; background-position: 0% 0%;" data-center="background-size: 150%; background-position: 50% 50%"></div>
+      <div class="col-sm-7">
+        <div class="col-sm-12">
+          <h2 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">火星上的特色</h2>
+        </div>
+        <div class="col-sm-12 features">
+          <div class="col-sm-4" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"><i class="fa fa-users"></i>
+            <h4>邂逅</h4>
+            <hr/>
+          </div>
+          <div class="col-sm-4" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"><i class="fa fa-tint"></i>
+            <h4>水</h4>
+            <hr/>
+          </div>
+          <div class="col-sm-4" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"><i class="fa fa-eercast"></i>
+            <h4>貓</h4>
+            <hr/>
+          </div>
+          <div class="col-sm-12">
+            <p>在火星上，每天都會有新的邂逅，不論是與陌生人、朋友或是新威尼斯。在這個充滿奇蹟的地方，只要活在當下，就能發現生活中的美好。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_future">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>移民火星將實現-SPACEX的可重複性火箭載體</h2>
+        <hr/>
+      </div>
+      <div class="col-sm-6"><img src="https://static.rti.org.tw/assets/thumbnails/2018/02/07/151798915553736.jpg" alt="" data-bottom-top="filter:grayscale(100%)" data-center="filter:grayscale(0%)"/></div>
+      <div class="col-sm-6 features" data-bottom-top="transform: translateX(30px)" data-center="transform: translateX(0px)"><i class="fa fa-rocket"></i>
+        <h3>SpaceX</h3>
+        <p>太空探索技術公司（英語：Space Exploration Technologies Corp.，商業名稱：SpaceX）是美國一家民營航太製造商和太空運輸公司，總部位於美國加利福尼亞州霍桑。</p>
+        <p>SpaceX由企業家伊隆·馬斯克於2002年創辦，目標是降低太空運輸的成本，並進行火星殖民。</p>
+      </div>
+      <div class="col-sm-6 features" data-bottom-top="transform: translateX(30px)" data-center="transform: translateX(0px)"><i class="fa fa-space-shuttle"></i>
+        <h3>可重複使用的火箭載體</h3>
+        <p>造火箭，並不難，如果你有幾十億的成本。難的是，花十分之一的錢造火箭。更難的是，以往的火箭都是一次性的。spacex造的火箭，是重複性使用的。</p>
+        <p>伊隆·馬斯克的雄心是，把商業發射市場發射費降低九成，未來把10萬人送上火星，進行星際移民。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="jumbotron">
+  <div class="container">
+    <h2 class="title">想了解更多水星領航員相關的故事嗎?</h2>
+    <input class="form-control" placeholder="Email"/>
+    <hr/>
+    <button class="btn btn-default">訂閱故事</button>
+  </div>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
