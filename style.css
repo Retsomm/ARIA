@@ -1,11 +1,17 @@
 @charset "UTF-8";
+:root {
+  --shadow-color: rgb(33 , 45, 53);
+}
 * {
   font-family: 微軟正黑體;
 }
 
 h1.title, h2.title {
-  color: #000;
-  /* background-color: rgba(255,255,204,0.2); */
+  color: white;
+  font-family: Futura, Trebuchet MS, Arial, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.4rem;
+  text-shadow: 1px 1px 0 var(--shadow-color), 2px 2px 0 var(--shadow-color), 3px 3px 0 var(--shadow-color), 4px 4px 0 var(--shadow-color), 5px 5px 0 var(--shadow-color), 6px 6px 0 var(--shadow-color);
 }
 
 body {
@@ -65,12 +71,6 @@ section#section_ask .col-sm-7.img {
   background-size: cover;
   width: 100%;
 }
-section#section_ask h2 {
-  margin-top: 140px;
-  padding-left: auto;
-  padding-right: auto;
-}
-
 section#section_about img {
   width: 98%;
 }
@@ -78,7 +78,18 @@ section#section_about .img_wrap {
   height: 220px;
   overflow: hidden;
 }
-
+section#section_ask .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experience {
+  margin: 30px;
+  font-size: 36px;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+}
 section#section_story {
   background-color: #57a3fa;
   color: white;
@@ -135,6 +146,11 @@ footer.jumbotron hr {
   max-width: 50px;
   border: solid 2px #57a3fa;
 }
+@media screen and (max-width: 996px) {
+  section#section_ask .row {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 768px) {
   h1.title, h2.title,.row h2 {
     margin: 30px;
@@ -149,4 +165,5 @@ footer.jumbotron hr {
   section#section_ask h2 {
     margin-top: 30px;
   }
+
 }
