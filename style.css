@@ -83,6 +83,10 @@ section#section_ask .row {
   justify-content: center;
   align-items: center;
 }
+.about {
+  font-size: 30px;
+  text-align: center;
+}
 .experience {
   margin: 30px;
   font-size: 36px;
@@ -165,5 +169,7 @@ footer.jumbotron hr {
   section#section_ask h2 {
     margin-top: 30px;
   }
-
+  .about, .experience {
+    font-size: 30px;
+  }
 }
